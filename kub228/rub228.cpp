@@ -36,7 +36,7 @@ int SysConTo10(char str[], int sys) {
 			k -= 48;
 		}
 		if (k >= sys) {
-			cout << "Число " << k << " не может находиться в данной системе счисления.\n";
+			cout << "Number " << k << " cannot be in this number system.\n";
 			break;
 			return 0;
 		}
@@ -49,15 +49,14 @@ int SysConTo10(char str[], int sys) {
 }
 void main()
 {
-	setlocale(LC_CTYPE, "rus");
 	int m, res = 0, st = 0; 
 	char val[100] = " ";
-	cout << "Введите число: "; gets_s(val);
-	cout << "Введите основание системы счисления: ";
+	cout << "Enter number: "; gets_s(val);
+	cout << "Enter the base of the number system: ";
 	cin >> m;
 	res = SysConTo10(val, m); 
 	int m2 = 0;
-	cout << "В какую систему счисления вы хотите перевести число ?" << endl;
+	cout << "Which number system do you want to convert the number to ?" << endl;
 	cin >> m2;
 	int tmp2 = TMP(res, m2);
 	for (int i = 0; i < tmp2; i++) {
@@ -108,3 +107,7 @@ void main()
 		cout << val[i];
 	cout << endl;
 }
+
+		
+		
+			
